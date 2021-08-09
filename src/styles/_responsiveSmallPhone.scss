@@ -1,0 +1,98 @@
+@media screen and (max-width: 380px) {
+    // i make this file for the small phones like galaxy S5...
+    // this part it's for the first page
+    .container{
+        .BlockOfProducts{
+            top: 45%;
+        }
+    }
+    // this styling is for the second page/ product page
+    .image {
+        // i make the image more smaller in the image slider
+        width: 200px;
+        height: 170px;
+      }
+    //   this one it's for the descraption box in the product page/ the page 2
+      .container1{
+          .DecraptionBox{
+            min-height: 00px;
+            .productInfo{
+                font-size: 16px;
+                margin: 5px 30px;
+                .category{
+                    font-size: 16px;
+                }
+                .title{
+                    font-size: 20px;
+                }
+            }
+            .ProductFeatures{
+                font-size: 16px;
+                .title{
+                    font-size: 24px;
+                }
+                .descraptionText{
+                    font-size: 10px;
+                    max-width: 250px;
+              }
+          }
+          div{
+            .buyNow{
+                bottom: 25%;
+                right: 20%;
+                font-size: 20px;
+        }
+        }
+      }
+ }
+//  this one it's for the comments component
+    .commentsBox{
+        top: 135%;
+        .image {
+            width: 200px;
+            height: 170px;
+        }
+        .title{
+            font-size: 24px;
+        }
+        .containerSpace{
+            left: 23%;
+            top: 58%;
+            font-size: 18px;
+            .buyBtn{
+                font-size: 18px;
+            }
+        }
+    }
+    // this is for the price box
+    .priceBox{
+        top: 210%;
+    }
+    // this styling is for the information box of the cleint
+    .infoBox{
+        right: -3%;
+        top: 255%;
+        .flex{
+            .titel{
+                font-size: 22px;
+            }
+            .inputsBox{
+                margin:5px;
+                top: 15%;
+                .infoInput{
+                    width: 300px;
+                    height: 30px;
+                    font-size: 20px;
+                }
+            }
+            .text{
+                font-size: 18px;
+                top: 70%;
+            }
+            .containerSpace{
+                top: 80%;
+                left: 0%;
+            }
+        }
+     }
+ }

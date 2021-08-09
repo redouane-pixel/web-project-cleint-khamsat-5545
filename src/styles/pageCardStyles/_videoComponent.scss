@@ -1,0 +1,30 @@
+// this code is for video component
+.VideoPart{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 103%;
+    iframe{
+        // this one how make the video look like
+        width: 1100px;
+        height: 500px;
+        margin: 75px 75px;
+        position: absolute;
+        left: 5%;
+        border-radius: 10px;
+        box-shadow: 12px 12px 0px -1px lighten($primaryColor, 10);
+        -webkit-box-shadow: 12px 12px 0px -1px lighten($primaryColor, 10);
+        -moz-box-shadow: 12px 12px 0px -1px lighten($primaryColor, 10);
+    }
+    .title{
+        // this for the title كيفية الإستخدام
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 36px;
+        position: absolute;
+        right: 5%;
+        top: 0%;
+        margin: 5px;
+        color: rgb(0, 0, 0);
+     }
+    }

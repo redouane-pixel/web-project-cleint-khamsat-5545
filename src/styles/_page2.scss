@@ -1,0 +1,15 @@
+// this file is for the styles of the page2/product page
+@import 'pageCardStyles/header';
+@import 'pageCardStyles/commentsBox';
+@import 'pageCardStyles/priceTable';
+@import 'pageCardStyles/infoBox';
+@import 'pageCardStyles/descraptionBox';
+@import 'pageCardStyles/videoComponent';
+    .defaultText{
+        font-size: 28px;
+        color: $primaryColor;
+        @extend %TextShadow;
+        position: absolute;
+        top: 95%;
+        left: 9%;
+    }

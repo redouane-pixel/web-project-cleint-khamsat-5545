@@ -1,0 +1,101 @@
+    // this styels it's for the information box in the page2/product page
+    .infoBox{
+        height: 100%;
+        width: 95%;
+        position: absolute;
+        top: 380%;
+        margin: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        .flex{
+            .titel{
+                font-size: 40px;
+                @extend %TextShadow;
+                position: absolute;
+                top: 3%;
+                margin:10px;
+                right: 0%;
+            }
+            .inputsBox{
+                position: absolute;
+                margin:10px;
+                display: flex;
+                flex-direction: column;
+                position:absolute;
+                top: 20%;
+                right: 0%;
+                .infoInput{
+                    width: 1000px;
+                    height: 40px;
+                    color: black;
+                    margin: 15px 0px;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    text-align: right;
+                    font-size: 26px;
+                    &::placeholder{
+                        color: rgb(172, 172, 172);
+                    }
+                    &:focus{
+                        resize: none;
+                        outline: none;
+                        border-bottom: 2px solid darken($primaryColor, 20%);
+                    }
+                }
+         }
+            // this style is for the text الدفع عند الإستلام
+            .text{
+                font-size: 24px;
+                color: $primaryColor;
+                position: absolute;
+                top: 75%;
+                right: 1%;
+            }
+            // this for give the button a good positon and some space
+            .containerSpace{
+                @extend %containerSpace;
+                top: 85%;
+                left: 45%;
+                padding-bottom: 10px;
+                // because this button have a special, i use it like that but it's the same of hover out button, and it display in the bottom of the page
+                .buyBtn{
+                    width: 200px;
+                    height: 50px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                    border-bottom-right-radius: 0px;
+                    background-color: white;
+                    border: 1px solid $primaryColor;
+                    color: $primaryColor;
+                    transition: ease-in 0.35s;
+                    outline: none;
+                    z-index: 1;
+                    position: relative;
+                    &:hover{
+                        color: #fff;
+                        cursor: pointer;      
+                    }
+                    &::before{
+                        transition: 0.5s all ease;
+                        position: absolute;
+                        left: 50%;
+                        right: 50%;
+                        top: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        content: "";
+                        background-color: $primaryColor;
+                        border-radius: 10px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    &:hover::before{
+                        transition: 0.5s all ease;
+                        left: 0;
+                        right: 0;
+                        opacity: 1;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }

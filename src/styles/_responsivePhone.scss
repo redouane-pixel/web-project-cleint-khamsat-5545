@@ -1,0 +1,256 @@
+// this file is for responsive styles for phones, if you need to change a thing just change what you need don't copy every thing
+@media screen and (max-width: 500px) {
+    // this is for the varialbes
+    %btn{
+        &:hover{
+            background-color: $primaryColor;
+        }
+        &:focus{
+            width: 150px;
+            height: 40px;
+            font-size: 25px;
+        }
+    }
+    %boxShadow {
+        box-shadow: none;  
+    }
+    %btnHoverOut{
+        font-size: 22px;
+    }
+    // this is for the first page:
+    .container{
+        // i make the top container more small, the text and ..., because of the phones are a lot of changes for this i make it more smaller
+        .topContainer{
+            margin: 20px;
+            .title{
+                font-size: 35px;
+                line-height: 50px;
+            }
+            .meduimText{
+                font-size: 30px;
+                
+            }
+            .smallText{
+                font-size: 15px;
+            }
+            .shopTitle{
+                font-size: 25px;
+                margin-top: 5px;
+            }
+            .NumberOfProducts{
+                font-size: 16px;
+            }
+        }
+        // this is for the block of products, and it will display just one product and like a list
+        .BlockOfProducts{
+            top: 40%;
+            .ProductCard{
+                width: 300px;
+                min-height: 430px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px;
+                img{
+                    width: 280px;
+                    height: 210px;
+                }
+            }
+        }
+    }
+    // this styles for the second page/the product page
+        .header{
+            .link{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        // this is for the image slider and i make it more small and in the top of the page
+        .slider {
+            position: absolute;
+            top: 0%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 5%;
+          }
+          .image {
+            width: 250px;
+            height: 200px;
+            border-radius: 5px;
+          }
+        //   arrow of image slider right
+          .right-arrow {
+            right: 0%;
+            top: 45%;
+            font-size: 2rem;
+          }
+          //   arrow of image slider left
+          .left-arrow {
+            left: 0%;
+            top: 45%;
+            font-size: 2rem;
+          }
+        //   this is for the descraption box in the product page/page2, and i make it display the second one in the screen
+          .container1{
+              width: 100%;
+              top: 50%;
+            .DecraptionBox{
+                width: 500px;
+                max-height: 450px;
+                overflow-y: scroll;
+                .productInfo{
+                    // i make the font-size smaller in the most of the page for look it good
+                    font-size: 18px;
+                    margin: 5px 30px;
+                    .category{
+                        font-size: 18px;
+                    }
+                    .title{
+                        font-size: 22px;
+                    }
+                }
+                .ProductFeatures{
+                    font-size: 18px;
+                    top: 24%;
+                    margin: 5px 30px;
+                    .title{
+                        font-size: 26px;
+                    }
+                    .descraptionText{
+                        font-size: 12px;
+                        max-width: 280px;
+                    }
+                }
+                // this is for the button in the descraption box الشراء الأن
+                div{
+                    .buyNow{
+                        position: absolute;
+                        bottom: 30%;
+                        left: 16%;
+                }
+                }
+              }
+          }
+        //   this one is for the video commponent and i remove it when the website open in a phone because of the design
+        .VideoPart{
+            display: none;
+        }
+        // this is for the comments box, and i make it small, and remove the shadow
+        .commentsBox{
+            top: 125%;
+            justify-content: center;
+            align-items: center;
+            .slider{
+                height: 60vh;
+                top: 0%;
+                left: 5%;
+            }
+            .image{
+                width: 250px;
+                height: 200px;
+            }
+            .right-arrow{
+                right: 5%;
+            }
+            .left-arrow{
+                left: 5%;
+            }
+            .title{
+                font-size: 26px;
+                top: 0%;
+                right: 5%;
+            }
+            .containerSpace{
+                // this is for the button أحصل عليه الأن
+                top: 60%;
+                left: 27%;
+            }
+        }
+        // this style is for the price tabel 
+        .priceBox{
+            top: 205%;
+            margin: 5px 15px;
+            height: 85%;
+            width: 97%;
+            .titel{
+                font-size: 26px;
+                top: 5%;
+            }
+            .priceTable{
+                width: 85%;
+                height: 170px;
+                font-size: 24px;
+                padding: 0px 10px;
+                margin-left: 5px;
+                border: 1px solid black;
+                .line{
+                    width: 95%;
+                    left: 2%;
+                }
+                .container{
+                    font-size: 18px;
+                    .group{
+                        margin: 5px -10px;
+                        .groumSmall{
+                            .checkbox{
+                                width: 10px;
+                                height: 10px;
+                                margin-left: 10px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                    // this one it's for the box of the second choice قطعتين
+                    .group2{
+                        width: 97%;
+                        height: 60px;
+                        margin: 0px -13px;
+                        padding: 10px;
+                        background-color: white;
+                        box-shadow: none;
+                        border: 2px solid rgb(0, 0, 0);
+                        font-size: 20px;
+                        .groumSmall2{
+                          display: flex;
+                            .checkbox {
+                                width: 11px;
+                                height: 11px;
+                                border: black solid 1px;
+                                margin-top: 15px;
+                              }
+                        }
+                 }
+
+                }
+            }
+        }
+        // this is for the information box in the last of the page, and i make the inputs smaller
+        .infoBox{
+            top: 250%;
+            width: 80%;
+            right: 0%;
+            .flex{
+                .titel{
+                    font-size: 22px;
+                }
+                .inputsBox{
+                    margin:5px;
+                    top: 15%;
+                    .infoInput{
+                        width: 300px;
+                        height: 30px;
+                        font-size: 22px;
+                    }
+                }
+                .text{
+                    font-size: 16px;
+                    top: 65%;
+                }
+                .containerSpace{
+                    // this is for the button
+                    top: 70%;
+                    left: 10%;
+                }
+            }
+        }
+    }

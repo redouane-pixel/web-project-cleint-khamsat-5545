@@ -1,0 +1,96 @@
+// this styles it's for descraption box in the page2/product page
+.container1{
+    @extend %split;
+    right: 0%;
+    display: flex;
+    justify-content: flex-end;
+    .DecraptionBox{
+        @extend %descraptionBox;
+        margin: 20px 40px;
+        border: 1px solid black;
+        width: 400px;
+        align-items: center;
+        justify-content: center;
+        .productInfo{ 
+            font-size: 26px;
+            text-align: right;
+            margin: 5px 25px;
+            list-style: none;
+            color: black;
+            // background-color: red; for test
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            .category{
+                opacity: 0.6;
+                font-size: 22px;
+             }
+             .title{
+                font-size: 28px;
+                color: black;
+                line-height: 30px;
+                @extend %TextShadow;
+                margin-bottom: 10px;
+                max-width: 380px;
+             }
+        }
+        .ProductFeatures{
+            font-size: 26px;
+            text-align: right;
+            margin: 5px 25px;
+            list-style: none;
+            color: black;
+            position: absolute;
+            top: 30%;
+            right: 5%;
+            height: auto;
+            .title{
+                // the features title
+                font-size: 34px;
+                color: $primaryColor;
+                line-height: 28px;
+                margin-bottom: 5px;
+            }
+            .descraptionText{
+                font-size: 16px;
+                height: auto;
+                max-width: 350px;
+            }
+            // this code is just of you have a list of features in place of descraption
+            .listOfFeatures{
+                text-align: right;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .featureLine{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: right;
+                    border: 1px solid black;
+                    margin-right: 0px;
+                    .icon{
+                        margin-top: 5px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        div{
+            // i use div for make space
+            .buyNow{
+                @extend %btnHoverOut;
+                width: 150px;
+                height: 40px;
+                position: absolute;
+                bottom: 8%;
+                right: 20%;
+                &:hover{
+                    // i use the darken here for make every thing simple and fine
+                    box-shadow: inset 150px 0 0 0  darken($primaryColor, 10);
+                    cursor: pointer;
+                 }
+        }
+        }
+    }
+}

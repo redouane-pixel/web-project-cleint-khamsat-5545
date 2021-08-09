@@ -1,0 +1,163 @@
+// this is the page for the variables, you can use variables by just put it, like, color:$primaryColor, or for% use @extend %btn...
+// this is the primary color that i use it in the buttons and titles..., and change it and a big part of the page will change
+$primaryColor: rgba(241, 60, 32, 1);
+// you can use this variable to make all your secondary text look the same
+$greyColor: rgba(100, 100, 100, 1);
+%TextShadow {
+    text-shadow: 0px 4px 4px rgba(104, 104, 104, 0.582);
+}
+%largeText{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+}
+%mediumText {
+    font-size: 50px;
+    font-weight: 600;
+}
+%smallText{
+    font-size: 20px;
+    color:rgb(145, 145, 145);
+}
+%btn{
+    // i don't use this style in the web page but you can use this it's so simple button, have the backround color to $primaryColor and a white text
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: $primaryColor;
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+    &:hover{
+        background-color: darken($primaryColor, 15);
+    }
+    &:focus{
+        width: 160px;
+        height: 45px;
+        font-size: 27px;
+    }
+}
+%btnStyle2{
+    // i don't use this style in the web page but you can use this it's button that have a border and text have same color and a white backround color
+    // this style is that the backround color it's white and the border and the text have the same color
+    width: 150px;
+    height: 40px;
+    color: $primaryColor;
+    background-color: white;
+    border: 1px solid $primaryColor;
+    font-size: 25px;
+    border-radius: 5px;
+    &:hover{
+        background-color: $primaryColor;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        width: 160px;
+        height: 45px;
+        font-size: 27px;
+    }
+}
+%btnHoverOut {
+    // this style is the button that when hover go to the new backround color
+    width: 120px;
+    height: 35px;
+    background-color: $primaryColor;
+    font-size: 24px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 0 darken($primaryColor, 10);
+    transition: ease-in 0.35s;
+    outline: none;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    &:hover{
+        box-shadow: inset 120px 0 0 0  darken($primaryColor, 10);
+        cursor: pointer;
+     }
+}
+// this style is for the button that are have a white backround and color text and border the same
+%btnWhiteBackroundHover {
+    width: 150px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 3px;
+    transition: ease-in 0.35s;
+    outline: none;
+    border: none;
+    color: $primaryColor;
+    z-index: 1;
+    position: relative;
+    border: 1px solid $primaryColor;
+    background-color: white;
+    &:hover{
+        color: #fff;
+        cursor: pointer;      
+    }
+    &::before{
+        transition: 0.5s all ease;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: $primaryColor;
+    }
+    &:hover::before{
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+    }
+}
+// 
+%split {
+    width: 50%;
+    height: 92%;
+    position: absolute;
+}
+%descraptionBox{
+    width: 350px;
+    // height: 450px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+%containerSpace{
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    height: 50px;
+    padding: 10px 28px;
+}
+%boxShadow {
+    // i use a css generator for this code
+    box-shadow: 11px 14px 46px 0px rgba(44,44,44,0.75);
+    -webkit-box-shadow: 11px 14px 46px 0px rgba(44,44,44,0.75);
+    -moz-box-shadow: 11px 14px 46px 0px rgba(44,44,44,0.75);
+}
+// this key feames it's for the animation of the upper Triangle in the top of the page
+@keyframes TransitionupperTriangle {
+    from {
+        transform: rotate(260deg);
+    }
+    to {
+        transform: rotate(317deg);
+    }
+}
+// this keyframes are for the elements how display in the beggening of the uplaoding and i use it just with the header in the product page/page
+@keyframes transitionIN {
+    from {
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

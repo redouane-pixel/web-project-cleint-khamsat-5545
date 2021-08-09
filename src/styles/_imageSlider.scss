@@ -1,0 +1,57 @@
+// this file is styles for the imageSlider component
+.slider {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    width: 550px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 45%;
+    right: -15%;
+    font-size: 3rem;
+     // if you need to change the color of arrow
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    font-size: 3rem;
+    // if you need to change the color of arrow
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .slide {
+    opacity: 0;
+    // if you need to change duration
+    transition-duration: 1s;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    // if you need to change duration
+    transition-duration: 0.5s;
+  }
+  .currentNum{
+    font-size: 26px;
+    color: rgb(145, 145, 145);
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+  }

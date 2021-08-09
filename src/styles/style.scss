@@ -1,0 +1,13 @@
+// this is a variables folder, put it all the time in the top of style.scss
+@import 'variables';
+// this is the page1 styles
+@import 'page1';
+// this is the page2 styles
+@import 'page2';
+// this the image slider styles and this by default
+@import '_imageSlider';
+// this one is a file for responsive phone put it in the bottom all the time
+@import '_responsivePhone';
+// this is a file for responsive small phones(less than 380px) and put it always at bottom
+@import '_responsiveSmallPhone'
+// for you know i use a family font, it's name is Cairo, and it's for arabic langauge
