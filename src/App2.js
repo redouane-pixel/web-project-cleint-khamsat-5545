@@ -1,45 +1,39 @@
-// this file is not used by default if you need to use it and use fake api just go to index.js and replace App by App2
+// this is the App file by default that we use just a local data and it's name is DataBaseCopie.jsx you can check it
+// and If you want to use a fake api just Go to index.js and replace App2 by App2
 import React, {useState, useEffect} from 'react';
 import './styles/style.scss';
 import Page1 from './page1/components/page1';
 import Page2 from './productPageComponent/page2';
 import ProductContext from './productContext';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-const App = () => {
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {DataBase} from './DataBaseCopie'
+const App2 = () => {
   // this is for the data from the api
-  const [products, setPoducts] = useState([]);
+  const [products, setPoducts] = useState(DataBase);
   const [isLoaded, setIsLoaded] = useState(false);
   // for i can change it in any place, i make it that i can change it to true in any place with context, i use it in listOfPoducts component
   const [moreProducts, setMoreProducts] = useState(false);
   // this state is just for the path of the route: /product/id
-  const [productPageurl, setProductPageurl] = useState("/product/")
+  const [productPageurl, setProductPageurl] = useState("/product/");
   // this useeffect it get the data from the api, and i use a fake api just change the link 
-  useEffect(() => {
-    fetch("http://localhost:3000/products2")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setPoducts(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        // this one it's for errors, if you need to display erros just use this
-        // (error) => {
-        //   setIsLoaded(true);
-        //   setError(error);
-        // }
-      )
-  }, [])
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/products2")
+  //     .then(res => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded(true);
+  //         setPoducts(result);
+  //       },
+  //       // Note: it's important to handle errors here
+  //       // instead of a catch() block so that we don't swallow
+  //       // exceptions from actual bugs in components.
+  //       // this one it's for errors, if you need to display erros just use this
+  //       // (error) => {
+  //       //   setIsLoaded(true);
+  //       //   setError(error);
+  // }, [])
   const contextValue = {products, setPoducts, isLoaded, setIsLoaded, moreProducts, setMoreProducts,}
   // if you need to make it look more good just made a loader here
-  if (!isLoaded) {
-    return(
-      <div>it's leading...</div>
-    );
-  }
-  else {
     return (
       <Router>
       <ProductContext.Provider value={contextValue}>
@@ -68,8 +62,6 @@ const App = () => {
              commentPicture1={product.commentPicture1}
              commentPicture2={product.commentPicture2}
              commentPicture3={product.commentPicture3}
-            //  this one is for the embedId of the youtube video
-            embedId={product.embedId}
              />
         </Route>
      ))}
@@ -78,5 +70,4 @@ const App = () => {
  </Router>
     );
   }
-  }
-export default App;
+export default App2;
