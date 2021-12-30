@@ -29,7 +29,7 @@ const InfoBox = () => {
                 {/* this is the part of inputs */}
                 <div className="inputsBox">
                     <input type="text" placeholder="الإسم الثالثي" className="infoInput" value={cleintName} onChange={handleChangeName}/>
-                    <input type="number" placeholder="رقم الهاتف" className="infoInput" value={phoneNumber} onChange={handleChangePhoneNumber}/>
+                    <input type="text" placeholder="رقم الهاتف" className="infoInput" value={phoneNumber} onChange={handleChangePhoneNumber}/>
                     <input type="text" placeholder="المحافظة" className="infoInput" value={cleintCity} onChange={handleChangeCity}/>
                     <input type="text" placeholder="العنوان+ أقرب علامة مميزة" className="infoInput" value={homeAddress} onChange={handleChangeHomeAdress}/>
                 </div>
